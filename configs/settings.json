@@ -1,0 +1,239 @@
+{
+  "SettingsVersion": 1.2,
+  "SimMode": "Multirotor",
+  "ViewMode": "SpringArmChase",
+  "FollowVehicle": "PX4",
+  "ClockType": "ScalableClock",
+  "PawnPaths": {
+    "DefaultQuadrotor": { "PawnBP": "Class'/Game/customDrone/BP_FlyingPawn.BP_FlyingPawn_C'" },
+    "enemy_UAV": { "PawnBP": "Class'/Game/customDrone/enemy_UAV.enemy_UAV_C'" }
+  },
+
+  "Vehicles": {
+    "PX4": {
+      "VehicleType": "SimpleFlight",
+      "X": 0,
+      "Y": 0,
+      "Z": 0,
+
+      "Sensors": {
+        "imu": {
+          "SensorType": 2,
+          "Enabled": true,
+          "UpdateFrequency": 30,
+          "UpdateLatency": 0,
+          "StartupDelay": 0,
+          "AngularRandomWalk": 0,
+          "GyroBiasStabilityTau": 500,
+          "GyroBiasStability": 0,
+          "VelocityRandomWalk": 0,
+          "AccelBiasStabilityTau": 800,
+          "AccelBiasStability": 0
+        },
+        "gps": {
+          "SensorType": 3,
+          "Enabled": true,
+          "UpdateFrequency": 30,
+          "UpdateLatency": 0,
+          "StartupDelay": 0,
+          "EphTimeConstant": 0.9,
+          "EpvTimeConstant": 0.9,
+          "EphInitial": 0,
+          "EpvInitial": 0,
+          "EphFinal": 0,
+          "EpvFinal": 0,
+          "EphMin3d": 3,
+          "EphMin2d": 4
+        },
+        "magnetometer": {
+          "SensorType": 4,
+          "Enabled": true,
+          "UpdateFrequency": 10,
+          "UpdateLatency": 0,
+          "StartupDelay": 0,
+          "NoiseSigma": 0.005,
+          "ScaleFactor": 1,
+          "NoiseBias": 0
+        },
+        "barometer": {
+          "SensorType": 5,
+          "Enabled": true,
+          "UpdateFrequency": 10,
+          "UpdateLatency": 0,
+          "StartupDelay": 0,
+          "PressureFactorSigma": 0.001825,
+          "PressureFactorTau": 3600,
+          "UncorrelatedNoiseSigma": 2.7
+        }
+      },
+
+      "Cameras": {
+        "CameraDepth": {
+          "CaptureSettings": [
+            {
+              "ImageType": 3,
+              "Width": 640,
+              "Height": 480,
+              "FOV_Degrees": 90,
+              "AutoExposureSpeed": 1000,
+              "AutoExposureBias": 0,
+              "AutoExposureMaxBrightness": 0.64,
+              "AutoExposureMinBrightness": 0.03,
+              "MotionBlurAmount": 0,
+              "TargetGamma": 1.0,
+              "ProjectionMode": "",
+              "OrthoWidth": 5.12
+            },
+            {
+              "ImageType": 4,
+              "Width": 640,
+              "Height": 480,
+              "FOV_Degrees": 90
+            }
+          ],
+          "NoiseSettings": [
+            {
+              "Enabled": false,
+              "ImageType": 0,
+              "RandContrib": 0.2,
+              "RandSpeed": 100000.0,
+              "RandSize": 500.0,
+              "RandDensity": 2,
+              "HorzWaveContrib": 0.03,
+              "HorzWaveStrength": 0.08,
+              "HorzWaveVertSize": 1.0,
+              "HorzWaveScreenSize": 1.0,
+              "HorzNoiseLinesContrib": 1.0,
+              "HorzNoiseLinesDensityY": 0.01,
+              "HorzNoiseLinesDensityXY": 0.5,
+              "HorzDistortionContrib": 1.0,
+              "HorzDistortionStrength": 0.002
+            }
+          ],
+          "Gimbal": {
+            "Stabilization": 0,
+            "Pitch": 0,
+            "Roll": 0,
+            "Yaw": 0
+          },
+          "X": 0,
+          "Y": 0,
+          "Z": -1,
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": 0,
+          "UnrealEngine": {
+            "PixelFormatOverride": [
+              {
+                "ImageType": 0,
+                "PixelFormat": 0
+              }
+            ]
+          }
+        },
+
+        "D435": {
+          "CaptureSettings": [
+            {
+              "ImageType": 0,
+              "Width": 320,
+              "Height": 240,
+              "FOV_Degrees": 69,
+              "AutoExposureSpeed": 100,
+              "AutoExposureBias": 0,
+              "AutoExposureMaxBrightness": 0.64,
+              "AutoExposureMinBrightness": 0.03,
+              "MotionBlurAmount": 0,
+              "TargetGamma": 1.0,
+              "NearPlaneDistance": 0.01,
+              "FarPlaneDistance": 1000
+            },
+            {
+              "ImageType": 1,
+              "Width": 320,
+              "Height": 240,
+              "FOV_Degrees": 69,
+              "NearPlaneDistance": 0.01,
+              "FarPlaneDistance": 1000
+            },
+            {
+              "ImageType": 2,
+              "Width": 320,
+              "Height": 240,
+              "FOV_Degrees": 69,
+              "NearPlaneDistance": 0.01,
+              "FarPlaneDistance": 1000
+            }
+          ],
+          "NoiseSettings": [
+            {
+              "Enabled": false,
+              "ImageType": 1,
+              "RandContrib": 0.02,
+              "RandSpeed": 100.0,
+              "RandSize": 500.0,
+              "RandDensity": 2,
+              "HorzWaveContrib": 0.01,
+              "HorzWaveStrength": 0.05,
+              "HorzWaveVertSize": 1.0,
+              "HorzWaveScreenSize": 1.0
+            }
+          ],
+          "Gimbal": {
+            "Stabilization": 0,
+            "Pitch": 0,
+            "Roll": 0,
+            "Yaw": 0
+          },
+          "X": 0.30,
+          "Y": 0.0,
+          "Z": -0.05,
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": 0,
+          "UnrealEngine": {
+            "PixelFormatOverride": [
+              {
+                "ImageType": 0,
+                "PixelFormat": 0
+              },
+              {
+                "ImageType": 1,
+                "PixelFormat": 1
+              }
+            ]
+          }
+        }
+      }
+    },
+    "EnemyUAV": {
+      "PawnPath": "DefaultQuadrotor",
+      "VehicleType": "SimpleFlight",
+      "X": -30,
+      "Y": 0,
+      "Z": 0
+    },
+    "our_uav_1": {
+      "PawnPath": "DefaultQuadrotor",
+      "VehicleType": "SimpleFlight",
+      "X": 3,
+      "Y": 3,
+      "Z": 0
+    },
+    "our_uav_2": {
+      "PawnPath": "DefaultQuadrotor",
+      "VehicleType": "SimpleFlight",
+      "X": -3,
+      "Y": 0,
+      "Z": 0
+    },
+    "our_uav_3": {
+      "PawnPath": "DefaultQuadrotor",
+      "VehicleType": "SimpleFlight",
+      "X": 3,
+      "Y": -3,
+      "Z": 0
+    }
+
+  }
+}
