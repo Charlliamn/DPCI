@@ -14,6 +14,7 @@ project/
 ├── configs/
 │   └── settings.json         # Basic AirSim configuration (environment setup only)
 ├── README.md
+├── requirements.txt
 ```
 
 ---
